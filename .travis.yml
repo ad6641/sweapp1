@@ -14,6 +14,9 @@ install:
 before_script:
   - python -m black .
   - flake8 --extend-exclude .venv,eb-virt,.ebextensions,.elasticbeanstalk --max-line-length 119
+  - python -m pip install urllib3==1.26.6
+
+
 
 script:
   - coverage run -m pytest
