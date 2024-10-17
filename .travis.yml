@@ -12,7 +12,7 @@ install:
   - python -m pip install black flake8 coverage coveralls
 
 before_script:
-  - black --check .  
+  - python -m black .
   - flake8           
 
 script:
