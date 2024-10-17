@@ -13,7 +13,7 @@ install:
 
 before_script:
   - python -m black .
-  - flake8           
+  - flake8 --extend-exclude .venv,eb-virt,.ebextensions,.elasticbeanstalk --max-line-length 119
 
 script:
   - coverage run -m pytest
