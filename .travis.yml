@@ -1,5 +1,10 @@
 language: python
 
+pull_request:
+  branches:
+    only:
+      - main
+
 install:
   - python -m pip install --upgrade setuptools==70.0.0
   - python -m pip install -r requirements.txt
